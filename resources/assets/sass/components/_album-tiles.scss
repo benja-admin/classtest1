@@ -1,0 +1,108 @@
+.tile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  align-items: stretch;
+  list-style: none;
+  margin: 8ch auto 5ch auto;
+  padding: 0;
+  width: 1170px;
+  max-width: 100%;
+  @media all and (max-width: 1024px) {
+    width: 100%;
+  }
+  @media all and (max-width: 700px) {
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+  }
+  a {
+    margin: auto;
+    text-align: center;
+  }
+
+  .tile {
+    margin: auto;
+    display: block;
+    border: 2px inset black;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    transition: all 0.4s ease-in-out;
+    @media all and (max-width: 700px) {
+      height: auto;
+      border: 0;
+    }
+    &:hover {
+      transform: scale(1.1) skew(-15deg, 15deg);
+      border: 2px outset white;
+      z-index: 999;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+/*///*/
+.tile .tile-overlay {
+  background: rgba(0, 0, 0, 1);
+  color: white;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.tile:hover .tile-overlay {
+  opacity: 1;
+}
+.tile-details {
+  color: white;
+  position: absolute;
+  text-align: center;
+  padding: 0 1rem;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  -moz-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out;
+}
+
+.tile:hover .tile-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  color: white;
+}
+
+.tile-title {
+  color: #fff;
+  background: black;
+  font-weight: 100;
+  margin-bottom: 0.5rem;
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  -moz-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out;
+}
+
+.tile-details p {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.fadeIn-bottom {
+  top: 80%;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "grunt-starter-kit",
+  "version": "1.0.0",
+  "author": "Andreas Farah",
+  "homepage": "http://secondnetwork.de",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:secondnetwork/grunt-starter-kit.git"
+  },
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "request": "^2.83.0",
+    "time-grunt": "^2.0.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,61 @@
+.flex-center {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1rem;
+  @media all and (max-width: $tablet-break) {
+    margin-top: 2rem;
+  }
+  @media all and (max-width: $tablet-break) {
+    margin-top: 0;
+  }
+}
+.social {
+  margin-top: 3rem;
+    @media all and (max-width: $tablet-break) {
+    margin-top: 2rem;
+  }
+    @media all and (max-width: $mobile-break) {
+    margin-top: 6.3rem;
+  }
+}
+.icon-3d {
+  padding: 10px;
+  // -webkit-animation: icon3d 200ms 10;
+  // animation: icon3d 200ms 10;
+  color: #fff;
+  -webkit-animation: icon3d 500ms infinite;
+  animation: icon3d 500ms infinite;
+  &:hover {
+    -webkit-animation: icon3d 300ms infinite;
+    animation: icon3d 300ms infinite;
+  }
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px $primary, -5px -6px $secondary;
+  }
+  25% {
+    text-shadow: -5px -6px $primary, 5px 4px $secondary;
+  }
+  50% {
+    text-shadow: 5px -4px $primary, -8px 4px $secondary;
+  }
+  75% {
+    text-shadow: -8px -4px $primary, -5px -4px $secondary;
+  }
+  100% {
+    text-shadow: -5px 0 $primary, 5px -4px $secondary;
+  }
+}
